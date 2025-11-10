@@ -86,7 +86,7 @@ class WormNETHttpServer
 				{
 					case "Login.asp":
 						html = "<CONNECT %s%s>".format(
-							configuration.irc.IP ? configuration.irc.IP : conn.tcp.localAddress.toAddrString,
+							configuration.irc.IP ? configuration.irc.IP : conn.localAddress.toAddrString,
 							configuration.http.connectPort ? ":" ~ configuration.http.connectPort : "",
 						);
 						if (configuration.http.newsFileName.exists)
