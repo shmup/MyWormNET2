@@ -10,6 +10,7 @@
 *.map
 *.mem
 *.suo
+*.zip
 mywormnet2
 
 # Logs
