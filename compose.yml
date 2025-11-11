@@ -1,0 +1,12 @@
+services:
+  mywormnet2:
+    build: .
+    ports:
+      - "6667:6667"
+      - "8081:8081"
+    volumes:
+      - ./mywormnet2.ini:/app/mywormnet2.ini:ro
+      - ./motd.txt:/app/motd.txt:ro
+      - ./news.html:/app/news.html:ro
+      - ./wwwroot:/app/wwwroot:ro
+    restart: unless-stopped
